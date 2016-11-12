@@ -28,14 +28,9 @@ info() {
 }
 
 are_you_sure() {
-    printf "$cyan> Are you sure you want to continue? "
-    read -n 1 -r
-    if [[ ! $REPLY =~ ^[Yy]$ ]]
-    then
-        [[ "$0" = "$BASH_SOURCE" ]] && exit 1 || return 1
-    else
-        printf "\n"
-    fi
+    printf "$cyan> The installation will start in $(tput bold)5 seconds$(tput sgr0). Are you sure you want to continue?$reset\n"
+    printf "$cyan> To cancel the installation press 'Cmd + C ' or 'Ctrl + C'.$reset\n"
+    sleep 5
 }
 
 download_zip() {
