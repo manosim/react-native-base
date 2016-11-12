@@ -57,7 +57,6 @@ Then you will have to install the `dependecies` & the `devDependencies`.
 Then copy the files/directories from the list below into your project.
  
     App/
-    .babelrc
     index.ios.js
     index.android.js
     

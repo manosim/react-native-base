@@ -52,7 +52,6 @@ rename_project_name() {
 copy_files() {
     printf "$cyan> Copying files.$reset\n"
     mkdir -p $APP_DESTINATION
-    cp "$ZIP_DESTINATION/.babelrc" .
     cp "$ZIP_DESTINATION/index.ios.js" .
     cp "$ZIP_DESTINATION/index.android.js" .
     cp -r "$ZIP_DESTINATION/$APP_DESTINATION/" $APP_DESTINATION
