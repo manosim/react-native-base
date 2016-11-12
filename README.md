@@ -1,21 +1,24 @@
 # react-native-base
 Everything you need when starting a new react native project.
 
+> Work In Progress
+
 
 ### Table of contents
 
   - [What's in the box](#whats-in-the-box)
   - [Libraries](#libraries)
+  - [Installation - Quick Start](#installation---quick-start)
+  - [Installation - Manually](#installation---manually)
   - [What is it?](#what-is-it)
   - [Why use it?](#why-use-it)
   - [Should I use it?](#should-i-use-it)
-  - [How to use it? Quick Start!](#how-to-use-it-quick-start)
 
 
 ### What's in the box?
 
   - RN's Navigator
-  - Tests
+  - Tests (using Enzyme)
   - Style Variables (for branding)
   - Constants Variables (for endpoints, external urls etc.)
   - A couple basic routes to get you started
@@ -23,11 +26,56 @@ Everything you need when starting a new react native project.
 
 ### Libraries
 
-  - Immutable JS [+](https://facebook.github.io/immutable-js/)
-  - Jest [+](https://facebook.github.io/jest/docs/tutorial-react-native.html)
   - Redux [+](http://redux.js.org/)
   - Redux Logger [+](https://github.com/evgenyrodionov/redux-logger)
   - React Native Vector Icons [+](https://github.com/oblador/react-native-vector-icons)
+  - Enzyme [+](http://airbnb.io/enzyme/)
+
+
+### Installation - Quick Start
+Make sure you have a fresh react-native project or initialize one and then `cd` into the project.
+
+    react-native init MyProject
+    cd MyProject/
+
+To install `react-native-base` it is suggested that you use the installation script:
+
+    curl -o- -L https://raw.githubusercontent.com/manosim/react-native-base/master/scripts/install.sh | bash
+
+
+### Installation - Manually
+
+Create your project as usual.
+
+    react-native init MyProject
+    cd MyProject/
+
+Then you will have to install the `dependecies` & the `devDependencies`.
+
+    # dependencies
+    npm install --save react-redux react-native-vector-icons redux 
+
+    # devDependencies
+    npm install --save-dev enzyme redux-logger
+    
+Then copy the files/directories from the list below into your project.
+ 
+    App/
+    index.ios.js
+    index.android.js
+
+Edit index.ios.js and index.android.js and replace `PROJECT_NAME` with your app's name.
+
+```diff
+-AppRegistry.registerComponent('PROJECT_NAME', () => AppContainer);
++AppRegistry.registerComponent('MyProject', () => AppContainer);
+```
+    
+Finally run the link command to link `react-native-vector-icons`.
+
+    react-native link
+    
+That's all folks!
 
 
 ### What is it?
@@ -43,42 +91,3 @@ Every time I am setting up a react-native project I have to follow pretty much t
 ### Should I use it?
 
 If you are familiar enough with React Native - YES. If you are not, it is still fine but note that this is **not** a boilerplate. You will also need some basic [redux](http://redux.js.org/) knowledge. If you don't plan to use redux, then all that's left is the implementation of the Navigator with the tests.
-
-
-### How to use it? Quick Start!
-
-Create your project as usual.
-
-    react-native init MyProject
-
-Then you will have to install the `dependecies` & the `devDependencies`.
-
-    # dependencies
-    npm install --save immutable react-redux react-native-vector-icons redux 
-
-    # devDependencies
-    npm install --save-dev babel-jest babel-preset-react-native enzyme jest-react-native redux-logger
-    
-Then copy the files from the list below into your project.
- 
-    .babelrc
-    App/
-    
-Include the jest basic configuration to your `package.json`.
-  
-    "jest": {
-      "preset": "jest-react-native"
-    },
-
-Finally run the link command to link `react-native-vector-icons`.
-
-    react-native link
-    
-That's all folks!
-
-
-### Coming Soon
-
-  - [ ] Create a shell script for easier installation
-  - [ ] Improve coverage of `./App/`
-
