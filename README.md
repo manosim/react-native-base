@@ -2,6 +2,16 @@
 Everything you need when starting a new react native project.
 
 
+### Table of contents
+
+  - [What's in the box](#whats-in-the-box)
+  - [Libraries](#libraries)
+  - [What is it?](#what-is-it)
+  - [Why use it?](#why-use-it)
+  - [Should I use it?](#should-i-use-it)
+  - [How to use it? Quick Start!](#how-to-use-it-quick-start)
+
+
 ### What's in the box?
 
   - RN's Navigator
