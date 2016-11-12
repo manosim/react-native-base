@@ -11,7 +11,7 @@ white="\e[0;37m"
 APP_NAME=$(cat package.json | grep name | head -1 | awk -F: '{ print $2 }' | sed 's/[ ",]//g')
 BRANCH_NAME="setup-app"
 DEPENDENCIES="immutable react-redux react-native-vector-icons redux"
-DEV_DEPENDENCIES="babel-jest babel-preset-react-native enzyme jest-react-native redux-logger"
+DEV_DEPENDENCIES="enzyme redux-logger"
 ZIP_FILENAME="react-native-base.zip"
 ZIP_DESTINATION="react-native-base-$BRANCH_NAME"
 APP_DESTINATION="App"
@@ -73,6 +73,11 @@ install_dependencies() {
     npm install --loglevel=warn --save-dev $DEV_DEPENDENCIES
 }
 
+link_dependencies() {
+    printf "$cyan> Linking with react-native link.$reset\n\n"
+    react-native link
+}
+
 clean_up() {
     printf "$cyan> Cleaning Up.$reset\n"
     rm -f $ZIP_FILENAME
@@ -85,6 +90,7 @@ install() {
 
     printf "\n$cyan> Installing react-native-base on $(tput bold)$APP_NAME$(tput sgr0).$reset\n"
     install_dependencies
+    link_dependencies
     download_zip
     unzip_app
     rename_project_name

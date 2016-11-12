@@ -64,19 +64,13 @@ Then you will have to install the `dependecies` & the `devDependencies`.
     npm install --save immutable react-redux react-native-vector-icons redux 
 
     # devDependencies
-    npm install --save-dev babel-jest babel-preset-react-native enzyme jest-react-native redux-logger
+    npm install --save-dev enzyme redux-logger
     
 Then copy the files from the list below into your project.
  
     .babelrc
     App/
     
-Include the jest basic configuration to your `package.json`.
-  
-    "jest": {
-      "preset": "jest-react-native"
-    },
-
 Finally run the link command to link `react-native-vector-icons`.
 
     react-native link
