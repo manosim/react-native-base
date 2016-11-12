@@ -64,7 +64,7 @@ copy_files() {
 }
 
 install_dependencies() {
-    printf "$cyan> Installing dependencies & devDependencies.$reset\n"
+    printf "$cyan> Installing dependencies & devDependencies.$reset\n\n"
 
     # dependencies
     npm install --loglevel=warn --save $DEPENDENCIES
