@@ -33,8 +33,12 @@ Everything you need when starting a new react native project.
 
 
 ### Installation - Quick Start
+Make sure you have a fresh react-native project or initialize one and then `cd` into the project.
 
-To install `react-native-base` with one line, you can use the installation script:
+    react-native init MyProject
+    cd MyProject/
+
+To install `react-native-base` it is suggested that you use the installation script:
 
     curl -o- -L https://raw.githubusercontent.com/manosim/react-native-base/master/scripts/install.sh | bash
 
@@ -44,6 +48,7 @@ To install `react-native-base` with one line, you can use the installation scrip
 Create your project as usual.
 
     react-native init MyProject
+    cd MyProject/
 
 Then you will have to install the `dependecies` & the `devDependencies`.
 
