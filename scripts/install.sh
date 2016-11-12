@@ -48,6 +48,12 @@ unzip_app() {
     unzip -qo $ZIP_FILENAME
 }
 
+rename_project_name() {
+    printf "$cyan> Renaming the project name in the entrypoints.$reset\n"
+    sed -i '' -e "s/PROJECT_NAME/$APP_NAME/g" "$ZIP_DESTINATION/index.ios.js"
+    sed -i '' -e "s/PROJECT_NAME/$APP_NAME/g" "$ZIP_DESTINATION/index.android.js"
+}
+
 copy_files() {
     printf "$cyan> Copying files.$reset\n"
     mkdir -p $APP_DESTINATION
@@ -81,6 +87,7 @@ install() {
     install_dependencies
     download_zip
     unzip_app
+    rename_project_name
     copy_files
     clean_up
 }
