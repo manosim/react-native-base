@@ -45,7 +45,14 @@ Every time I am setting up a react-native project I have to follow pretty much t
 If you are familiar enough with React Native - YES. If you are not, it is still fine but note that this is **not** a boilerplate. You will also need some basic [redux](http://redux.js.org/) knowledge. If you don't plan to use redux, then all that's left is the implementation of the Navigator with the tests.
 
 
-### How to use it? Quick Start!
+### Installation - Quick Start!
+
+To install `react-native-base` with one line, you can use the installation script:
+
+    curl -o- -L https://raw.githubusercontent.com/manosim/react-native-base/setup-app/scripts/install.sh | bash
+
+
+### Installation - Manually
 
 Create your project as usual.
 
