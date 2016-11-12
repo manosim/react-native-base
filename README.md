@@ -1,6 +1,8 @@
 # react-native-base
 Everything you need when starting a new react native project.
 
+> Work In Progress
+
 
 ### Table of contents
 
@@ -49,7 +51,7 @@ If you are familiar enough with React Native - YES. If you are not, it is still 
 
 To install `react-native-base` with one line, you can use the installation script:
 
-    curl -o- -L https://raw.githubusercontent.com/manosim/react-native-base/setup-app/scripts/install.sh | bash
+    curl -o- -L https://raw.githubusercontent.com/manosim/react-native-base/master/scripts/install.sh | bash
 
 
 ### Installation - Manually
