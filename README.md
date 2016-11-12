@@ -59,6 +59,13 @@ Then copy the files/directories from the list below into your project.
     App/
     index.ios.js
     index.android.js
+
+Edit index.ios.js and index.android.js and replace `PROJECT_NAME` with your app's name.
+
+```diff
+-AppRegistry.registerComponent('PROJECT_NAME', () => AppContainer);
++AppRegistry.registerComponent('MyProject', () => AppContainer);
+```
     
 Finally run the link command to link `react-native-vector-icons`.
 
