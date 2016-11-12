@@ -26,7 +26,6 @@ Everything you need when starting a new react native project.
 
 ### Libraries
 
-  - Immutable JS [+](https://facebook.github.io/immutable-js/)
   - Jest [+](https://facebook.github.io/jest/docs/tutorial-react-native.html)
   - Redux [+](http://redux.js.org/)
   - Redux Logger [+](https://github.com/evgenyrodionov/redux-logger)
@@ -49,7 +48,7 @@ Create your project as usual.
 Then you will have to install the `dependecies` & the `devDependencies`.
 
     # dependencies
-    npm install --save immutable react-redux react-native-vector-icons redux 
+    npm install --save react-redux react-native-vector-icons redux 
 
     # devDependencies
     npm install --save-dev enzyme redux-logger
