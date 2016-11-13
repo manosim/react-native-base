@@ -14,19 +14,23 @@ import Routes from '../Navigation/Routes';
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    justifyContent: 'center',
   },
   title: {
-    fontSize: 32,
+    fontSize: 26,
     fontWeight: 'bold',
-    color: 'white',
     textAlign: 'center',
   },
   desc: {
     marginVertical: 5,
     fontSize: 18,
-    color: 'white',
     textAlign: 'center',
   },
+  button: {
+    borderWidth: 2,
+    borderRadius: 15,
+    borderColor: 'red',
+  }
 });
 
 export default class Home extends React.Component {
@@ -41,10 +45,11 @@ export default class Home extends React.Component {
         <Text style={styles.desc}>{Constants.APP_DESC}</Text>
 
         <Button
-          text="About"
-          color="#841584"
-          onPress={() => this.props.navigator.push(Routes.about())}
-          isFilled />
+          style={styles.button}
+          title="More Information"
+          color={Styles.THEME_PRIMARY}
+          onPress={() => this.props.navigator.push(Routes.info())}
+        />
       </View>
     );
   }

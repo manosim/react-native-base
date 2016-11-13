@@ -10,4 +10,6 @@ export default {
   NAVBAR_BUTTON_ICON_SIZE: 32,
   BASE_BORDER_RADIUS: 5,
 
+  THEME_PRIMARY: '#2359BA',
+
 };

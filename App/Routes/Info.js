@@ -13,17 +13,16 @@ import Routes from '../Navigation/Routes';
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    justifyContent: 'center',
   },
   title: {
-    fontSize: 32,
+    fontSize: 26,
     fontWeight: 'bold',
-    color: 'white',
     textAlign: 'center',
   },
   desc: {
     marginVertical: 5,
     fontSize: 18,
-    color: 'white',
     textAlign: 'center',
   },
 });

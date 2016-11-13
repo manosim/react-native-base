@@ -62,7 +62,7 @@ export default class AppContainer extends React.Component {
       <Provider store={store}>
         <View style={styles.container}>
           <Navigator
-            initialRoute={Routes.dashboard()}
+            initialRoute={Routes.home()}
             renderScene={(route, navigator) => this.renderScene(route, navigator)}
             navigationBar={
               <NavigationBar style={styles.navbar} routeMapper={RouteMapper} />
