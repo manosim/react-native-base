@@ -1,8 +1,6 @@
 # react-native-base
 Everything you need when starting a new react native project.
 
-> Work In Progress
-
 
 ### Table of contents
 
