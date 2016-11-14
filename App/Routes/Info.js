@@ -6,9 +6,7 @@ import {
   View,
 } from 'react-native';
 
-import Styles from '../Utils/Styles';
 import Constants from '../Utils/Constants';
-import Routes from '../Navigation/Routes';
 
 const styles = StyleSheet.create({
   container: {
