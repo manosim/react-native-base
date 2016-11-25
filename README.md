@@ -54,7 +54,7 @@ Then you will have to install the `dependecies` & the `devDependencies`.
     npm install --save react-redux react-native-vector-icons redux 
 
     # devDependencies
-    npm install --save-dev enzyme redux-logger
+    npm install --save-dev enzyme react-dom react-addons-test-utils redux-logger
     
 Then copy the files/directories from the list below into your project.
  
