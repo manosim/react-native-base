@@ -8,7 +8,7 @@ describe('Navigation/NavigationButton.js', () => {
   it('renders correctly', () => {
     const props = {
       navigator: {
-        push: jasmine.createSpy(),
+        push: jest.fn(),
         getCurrentRoutes: () => [
           { id: 'test' },
           { id: 'another-test' },
@@ -30,7 +30,7 @@ describe('Navigation/NavigationButton.js', () => {
   it('does not push if already in same view', () => {
     const props = {
       navigator: {
-        push: jasmine.createSpy(),
+        push: jest.fn(),
         getCurrentRoutes: () => [
           { id: 'test' },
           { id: 'home-view' },
