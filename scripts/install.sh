@@ -76,6 +76,7 @@ clean_up() {
     printf "$cyan> Cleaning Up.$reset\n"
     rm -f $ZIP_FILENAME
     rm -rf $ZIP_DESTINATION
+    rm -rf __tests__/
 }
 
 install() {
