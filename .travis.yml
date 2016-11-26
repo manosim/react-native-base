@@ -9,7 +9,6 @@ cache:
 
 install:
   - npm install -g react-native-cli
-  - travis_debug
   - sh scripts/tests.sh
 
 script:

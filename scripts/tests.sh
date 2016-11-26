@@ -16,6 +16,7 @@ copy_files() {
     cp -f "../index.android.js" .
     cp -r ../App .
     rm -rf __tests__/
+    ls -la
 }
 
 install_dependencies() {
@@ -30,6 +31,8 @@ install_dependencies() {
 
 rename_project_name() {
     printf "> Renaming the project name in the entrypoints.\n"
+    pwd
+    ls -la
     sed -i '' -e "s/PROJECT_NAME/DemoApp/g" "index.ios.js"
     sed -i '' -e "s/PROJECT_NAME/DemoApp/g" "index.android.js"
 }
