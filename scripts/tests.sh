@@ -12,6 +12,8 @@ create_rn_project() {
 
 copy_files() {
     printf "> Copying files.\n"
+    cp -f "../index.ios.js" .
+    cp -f "../index.android.js" .
     cp -r ../App .
     rm -rf __tests__/
 }
