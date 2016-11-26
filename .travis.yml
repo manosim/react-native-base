@@ -1,0 +1,15 @@
+language: node_js
+
+node_js:
+  - '6.9.1'
+
+cache:
+  directories:
+    - node_modules
+
+install:
+  - npm install -g react-native-cli
+  - sh scripts/tests.sh
+
+script:
+  - npm test -- --coverage
