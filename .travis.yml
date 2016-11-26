@@ -14,4 +14,4 @@ install:
   - sh scripts/tests.sh
 
 script:
-  - npm test -- --coverage
+  - cd DemoApp/ && npm test -- --coverage
