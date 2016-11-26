@@ -15,3 +15,6 @@ install:
 
 script:
   - cd DemoApp/ && npm test -- --coverage
+
+after_success:
+  - cd DemoApp/ && bash <(curl -s https://codecov.io/bash)
