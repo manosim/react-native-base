@@ -10,6 +10,7 @@ cache:
 install:
   - npm install -g react-native-cli
   - sh scripts/tests.sh
+  - travis_debug
 
 script:
   - npm test -- --coverage
