@@ -15,16 +15,18 @@ Everything you need when starting a new react native project.
 
 ### What's in the box?
 
-  - RN's Navigator
-  - Tests (using Enzyme)
+  - React Native Navigator
+  - Tests (using Enzyme) - Coverage **100%**
   - Style Variables (for branding)
-  - Constants Variables (for endpoints, external urls etc.)
+  - Constant Variables (for endpoints, external urls etc.)
   - A couple basic routes to get you started
 
 
 ### Libraries
 
   - Redux [+](http://redux.js.org/)
+  - React DOM [+](https://www.npmjs.com/package/react-dom)
+  - React Addons Test Utils [+](https://www.npmjs.com/package/react-addons-test-utils)
   - Redux Logger [+](https://github.com/evgenyrodionov/redux-logger)
   - React Native Vector Icons [+](https://github.com/oblador/react-native-vector-icons)
   - Enzyme [+](http://airbnb.io/enzyme/)
