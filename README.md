@@ -1,4 +1,5 @@
-# react-native-base
+react-native-base [![travis][travis-image]][travis-url] [![codecov][codecov-image]][codecov-url]
+===
 Everything you need when starting a new react native project.
 
 
@@ -91,3 +92,9 @@ Every time I am setting up a react-native project I have to follow pretty much t
 ### Should I use it?
 
 If you are familiar enough with React Native - YES. If you are not, it is still fine but note that this is **not** a boilerplate. You will also need some basic [redux](http://redux.js.org/) knowledge. If you don't plan to use redux, then all that's left is the implementation of the Navigator with the tests.
+
+
+[travis-image]: https://travis-ci.org/manosim/react-native-base.svg?branch=master
+[travis-url]: https://travis-ci.org/manosim/react-native-base
+[codecov-image]: https://codecov.io/gh/manosim/react-native-base/branch/master/graph/badge.svg
+[codecov-url]: https://codecov.io/gh/manosim/react-native-base
