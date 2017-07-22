@@ -3,7 +3,7 @@ import { Provider } from 'react-redux';
 import { Navigator } from 'react-native-deprecated-custom-components';
 
 import {
-  BackAndroid,
+  BackHandler,
   StyleSheet,
   View,
 } from 'react-native';
@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
 
 export default class AppContainer extends React.Component {
   componentWillMount() {
-    BackAndroid.addEventListener('hardwareBackPress', () => {
+    BackHandler.addEventListener('hardwareBackPress', () => {
       if (this.navigator && this.navigator.getCurrentRoutes().length > 1) {
         this.navigator.pop();
         return true;
