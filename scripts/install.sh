@@ -14,7 +14,7 @@ DEPENDENCIES="react-native-deprecated-custom-components react-redux react-native
 DEV_DEPENDENCIES="enzyme react-dom react-addons-test-utils redux-logger"
 ZIP_FILENAME="react-native-base.zip"
 ZIP_DESTINATION="react-native-base-$BRANCH_NAME"
-APP_DESTINATION="App"
+APP_DESTINATION="app"
 
 info() {
     printf "\n"
