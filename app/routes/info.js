@@ -1,15 +1,12 @@
 import React from 'react';
 
 import {
-  Button,
   StyleSheet,
   Text,
   View,
 } from 'react-native';
 
-import Styles from '../utils/styles';
-import Constants from '../utils/constants';
-import Routes from '../navigation/routes';
+import Constants from '../Utils/Constants';
 
 const styles = StyleSheet.create({
   container: {
@@ -26,14 +23,9 @@ const styles = StyleSheet.create({
     fontSize: 18,
     textAlign: 'center',
   },
-  button: {
-    borderWidth: 2,
-    borderRadius: 15,
-    borderColor: 'red',
-  }
 });
 
-export default class Home extends React.Component {
+export default class Info extends React.Component {
   static propTypes = {
     navigator: React.PropTypes.object.isRequired,
   }
@@ -43,13 +35,6 @@ export default class Home extends React.Component {
       <View style={styles.container}>
         <Text style={styles.title}>{Constants.APP_NAME}</Text>
         <Text style={styles.desc}>{Constants.APP_DESC}</Text>
-
-        <Button
-          style={styles.button}
-          title="More Information"
-          color={Styles.THEME_PRIMARY}
-          onPress={() => this.props.navigator.push(Routes.info())}
-        />
       </View>
     );
   }

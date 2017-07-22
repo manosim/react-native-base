@@ -3,9 +3,9 @@ import React from 'react'; // eslint-disable-line no-unused-vars
 
 import { shallow } from 'enzyme';
 
-import NavigationBar from '../../Navigation/NavigationBar';
+import NavigationBar from '../../navigation/navigation-bar';
 
-describe('Navigation/NavigationBar.js', () => {
+describe('navigation/navigation-bar.js', () => {
   it('renders correctly without any children', () => {
     const props = {
       navState: {

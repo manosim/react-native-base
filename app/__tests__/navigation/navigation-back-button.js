@@ -2,9 +2,9 @@ import 'react-native';
 import React from 'react'; // eslint-disable-line no-unused-vars
 import { shallow } from 'enzyme';
 
-import NavigationBackButton from '../../Navigation/NavigationBackButton';
+import NavigationBackButton from '../../navigation/navigation-back-button';
 
-describe('Navigation/NavigationBackButton.js', () => {
+describe('navigation/navigation-back-button.js', () => {
   it('renders correctly', () => {
     const props = {
       navigator: {

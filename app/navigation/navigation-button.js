@@ -7,8 +7,8 @@ import {
   Text,
 } from 'react-native';
 
-import Routes from './Routes';
-import Styles from '../Utils/Styles';
+import Routes from './routes';
+import Styles from '../utils/styles';
 
 const styles = StyleSheet.create({
   container: {

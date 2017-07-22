@@ -1,9 +1,9 @@
 import 'react-native';
 import React from 'react'; // eslint-disable-line no-unused-vars
 
-import RouteMapper from '../../Navigation/RouteMapper';
+import RouteMapper from '../../navigation/route-mapper';
 
-describe('Navigation/RouteMapper.js', () => {
+describe('navigation/route-mapper.js', () => {
   it('has all properties', () => {
     expect(Object.keys(RouteMapper).length).toEqual(3);
   });

@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-DEPENDENCIES="react-redux react-native-vector-icons redux"
+DEPENDENCIES="react-native-deprecated-custom-components react-redux react-native-vector-icons redux"
 DEV_DEPENDENCIES="enzyme react-dom react-addons-test-utils redux-logger"
 
 create_rn_project() {

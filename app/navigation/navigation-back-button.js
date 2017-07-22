@@ -7,7 +7,7 @@ import {
   View,
 } from 'react-native';
 
-import Styles from '../Utils/Styles';
+import Styles from '../utils/styles';
 
 const styles = StyleSheet.create({
   container: {

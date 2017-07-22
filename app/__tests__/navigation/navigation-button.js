@@ -2,9 +2,9 @@ import 'react-native';
 import React from 'react'; // eslint-disable-line no-unused-vars
 import { shallow } from 'enzyme';
 
-import NavigationButton from '../../Navigation/NavigationButton';
+import NavigationButton from '../../navigation/navigation-button';
 
-describe('Navigation/NavigationButton.js', () => {
+describe('navigation/navigation-button.js', () => {
   it('renders correctly', () => {
     const props = {
       navigator: {

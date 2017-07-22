@@ -1,19 +1,21 @@
 import 'react-native';
+import { View } from 'react-native';
 import React from 'react'; // eslint-disable-line no-unused-vars
 import { shallow } from 'enzyme';
 
-import NavbarTitle from '../../Navigation/NavbarTitle';
+import SceneContainer from '../../navigation/scene-container';
 
-describe('Navigation/NavbarTitle.js', () => {
+describe('navigation/scene-container.js', () => {
   it('renders correctly', () => {
     const props = {
+      navigator: {},
       route: {
-        title: 'View Title',
-      },
+        component: View
+      }
     };
 
     const wrapper = shallow(
-      <NavbarTitle {...props} />
+      <SceneContainer {...props} />
     );
 
     expect(wrapper).toBeDefined();
