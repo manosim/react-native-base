@@ -2,11 +2,11 @@ import 'react-native';
 import React from 'react'; // eslint-disable-line no-unused-vars
 import { shallow } from 'enzyme';
 
-import Home from '../../Routes/Home';
+import Home from '../../routes/home';
 
 import renderer from 'react-test-renderer';
 
-describe('Routes/Home.js', () => {
+describe('routes/home.js', () => {
   it('renders correctly', () => {
     const tree = renderer.create(
       <Home navigator={{}} />
