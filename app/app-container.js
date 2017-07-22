@@ -1,10 +1,10 @@
 import React from 'react';
 import { Provider } from 'react-redux';
+import { Navigator } from 'react-native-deprecated-custom-components';
 
 import {
   BackAndroid,
   StyleSheet,
-  Navigator,
   View,
 } from 'react-native';
 
