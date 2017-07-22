@@ -6,7 +6,7 @@ import {
   View,
 } from 'react-native';
 
-import Constants from '../Utils/Constants';
+import Constants from '../utils/constants';
 
 const styles = StyleSheet.create({
   container: {
