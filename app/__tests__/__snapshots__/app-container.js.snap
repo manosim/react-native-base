@@ -1,4 +1,4 @@
-exports[`AppContainer.js renders correctly 1`] = `
+exports[`app-container.js renders correctly 1`] = `
 <View
   style={
     Object {

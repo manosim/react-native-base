@@ -7,21 +7,21 @@ import Home from '../../routes/home';
 import renderer from 'react-test-renderer';
 
 describe('routes/home.js', () => {
+  const props = {
+    navigation: {
+      push: jest.fn()
+    }
+  };
+
   it('renders correctly', () => {
     const tree = renderer.create(
-      <Home navigator={{}} />
+      <Home {...props} />
     );
 
     expect(tree).toMatchSnapshot();
   });
 
   it('should navigate to the info view', () => {
-    const props = {
-      navigator: {
-        push: jest.fn()
-      }
-    };
-
     const wrapper = shallow(
       <Home {...props} />
     );
@@ -29,6 +29,6 @@ describe('routes/home.js', () => {
     expect(wrapper).toBeDefined();
 
     wrapper.find('Button').simulate('press');
-    expect(props.navigator.push).toHaveBeenCalled();
+    expect(props.navigation.navigate).toHaveBeenCalled();
   });
 });
