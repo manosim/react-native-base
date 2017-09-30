@@ -8,8 +8,8 @@ class AppNavigator extends React.Component {
 }
 
 AppNavigator.router = {
-  getStateForAction: jest.fn(),
-  getActionForPathAndParams: jest.fn(),
+  getStateForAction: jest.fn(() => ({})),
+  getActionForPathAndParams: jest.fn(() => ({})),
 };
 
 export const StackNavigator = () => {
