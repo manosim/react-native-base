@@ -1,8 +1,8 @@
 #!/bin/bash
 set -e
 
-DEPENDENCIES="react-redux react-native-vector-icons redux"
-DEV_DEPENDENCIES="enzyme react-dom react-addons-test-utils redux-logger"
+DEPENDENCIES="react-navigation react-redux react-native-vector-icons redux"
+DEV_DEPENDENCIES="enzyme enzyme-adapter-react-16 prop-types react-dom redux-logger"
 
 create_rn_project() {
     printf "> Creating React Native Project.\n\n"
@@ -14,6 +14,7 @@ copy_files() {
     printf "> Copying files.\n"
     cp -f "../index.ios.js" .
     cp -f "../index.android.js" .
+    cp -f "../jest.config.js" .
     cp -r ../App .
     rm -rf __tests__/
 }

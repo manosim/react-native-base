@@ -1,6 +1,20 @@
-import React from 'react'; // eslint-disable-line no-unused-vars
+import React from 'react';
 import { AppRegistry } from 'react-native';
+import { Provider } from 'react-redux';
 
-import AppContainer from './App/AppContainer';
+import AppContainer from './app/app-container';
+import configureStore from './app/store/configure-store';
 
-AppRegistry.registerComponent('PROJECT_NAME', () => AppContainer);
+const store = configureStore();
+
+class App extends React.Component {
+  render() {
+    return (
+      <Provider store={store}>
+        <AppContainer />
+      </Provider>
+    );
+  }
+}
+
+AppRegistry.registerComponent('PROJECT_NAME', () => App);
