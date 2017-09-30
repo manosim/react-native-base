@@ -1,7 +1,7 @@
 import 'react-native';
 import React from 'react';
 import { shallow } from 'enzyme';
-import { BackAndroid } from 'react-native';
+import { BackHandler } from 'react-native';
 
 import AppContainer from '../app-container';
 
@@ -16,10 +16,10 @@ describe('app-container.js', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it('should press the BackAndroid button(with history)', function () {
+  it('should press the BackHandler button(with history)', function () {
     let backCallback = null;
 
-    spyOn(BackAndroid, 'addEventListener').and.callFake((callbackName, callback) => {
+    spyOn(BackHandler, 'addEventListener').and.callFake((callbackName, callback) => {
       backCallback = callback;
     });
 
@@ -35,15 +35,15 @@ describe('app-container.js', () => {
 
     expect(wrapper).toBeDefined();
     expect(pop).toHaveBeenCalledTimes(1);
-    expect(BackAndroid.addEventListener).toHaveBeenCalledTimes(1);
+    expect(BackHandler.addEventListener).toHaveBeenCalledTimes(1);
 
-    BackAndroid.addEventListener.calls.reset();
+    BackHandler.addEventListener.calls.reset();
   });
 
-  it('should press the BackAndroid button(without history)', function () {
+  it('should press the BackHandler button(without history)', function () {
     let backCallback = null;
 
-    spyOn(BackAndroid, 'addEventListener').and.callFake((callbackName, callback) => {
+    spyOn(BackHandler, 'addEventListener').and.callFake((callbackName, callback) => {
       backCallback = callback;
     });
 
@@ -59,9 +59,9 @@ describe('app-container.js', () => {
 
     expect(wrapper).toBeDefined();
     expect(pop).not.toHaveBeenCalled();
-    expect(BackAndroid.addEventListener).toHaveBeenCalledTimes(1);
+    expect(BackHandler.addEventListener).toHaveBeenCalledTimes(1);
 
-    BackAndroid.addEventListener.calls.reset();
+    BackHandler.addEventListener.calls.reset();
   });
 
   it('should test the SceneContainer', function () {
