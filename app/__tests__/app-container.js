@@ -80,4 +80,14 @@ describe('app-container.js', () => {
 
     BackHandler.addEventListener.calls.reset();
   });
+
+  it('should remove the BackHandler listener', () => {
+    spyOn(BackHandler, 'removeEventListener');
+
+    const wrapper = shallow(<AppContainer {...props} />);
+
+    wrapper.unmount();
+
+    expect(BackHandler.removeEventListener).toHaveBeenCalledTimes(1);
+  });
 });
