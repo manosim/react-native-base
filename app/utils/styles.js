@@ -1,15 +1,10 @@
-import { Platform } from 'react-native';
-
+const BRAND_BLUE = '#2359BA';
 
 export default {
-
   BODY_BG: '#E9F2F6',
 
-  NAVBAR_BG: '#2359BA',
-  NAVBAR_HEIGHT: (Platform.OS === 'ios' ? 64 : 56),
-  NAVBAR_BUTTON_ICON_SIZE: 32,
-  BASE_BORDER_RADIUS: 5,
+  BRAND_BLUE: BRAND_BLUE,
 
-  THEME_PRIMARY: '#2359BA',
-
+  NARBAR_BG_COLOR: BRAND_BLUE,
+  NARBAR_TEXT_COLOR: 'white',
 };

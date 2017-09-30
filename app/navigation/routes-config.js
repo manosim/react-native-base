@@ -29,5 +29,8 @@ export default {
   },
   Info: {
     screen: Info,
+    navigationOptions: {
+      title: 'Information'
+    },
   },
 };

@@ -10,7 +10,6 @@ import {
 
 import Styles from '../utils/styles';
 import Constants from '../utils/constants';
-import Routes from '../navigation/routes';
 
 const styles = StyleSheet.create({
   container: {
@@ -48,7 +47,7 @@ export default class Home extends React.Component {
         <Button
           style={styles.button}
           title="More Information"
-          color={Styles.THEME_PRIMARY}
+          color={Styles.BRAND_BLUE}
           onPress={() => this.props.navigation.navigate('Info')}
         />
       </View>
