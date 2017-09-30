@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import {
   Button,
@@ -35,7 +36,7 @@ const styles = StyleSheet.create({
 
 export default class Home extends React.Component {
   static propTypes = {
-    navigator: React.PropTypes.object.isRequired,
+    navigator: PropTypes.object.isRequired,
   }
 
   render() {

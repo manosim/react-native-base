@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import {
   StyleSheet,
@@ -27,7 +28,7 @@ const styles = StyleSheet.create({
 
 export default class Info extends React.Component {
   static propTypes = {
-    navigator: React.PropTypes.object.isRequired,
+    navigator: PropTypes.object.isRequired,
   }
 
   render() {

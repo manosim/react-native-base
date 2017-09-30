@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import {
   StyleSheet,
@@ -20,7 +21,7 @@ const styles = StyleSheet.create({
 
 export default class NavigationTitle extends React.PureComponent {
   static propTypes = {
-    route: React.PropTypes.object.isRequired,
+    route: PropTypes.object.isRequired,
   }
 
   render() {

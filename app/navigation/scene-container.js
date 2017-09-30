@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import {
   StyleSheet,
@@ -15,8 +16,8 @@ const styles = StyleSheet.create({
 
 export default class SceneContainer extends React.Component {
   static propTypes = {
-    route: React.PropTypes.object.isRequired,
-    navigator: React.PropTypes.object.isRequired,
+    route: PropTypes.object.isRequired,
+    navigator: PropTypes.object.isRequired,
   }
 
   render() {

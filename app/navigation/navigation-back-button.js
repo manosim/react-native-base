@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Icon from 'react-native-vector-icons/Octicons';
 
 import {
@@ -26,7 +27,7 @@ const styles = StyleSheet.create({
 
 export default class NavigationBackButton extends React.PureComponent {
   static propTypes = {
-    navigator: React.PropTypes.object.isRequired,
+    navigator: PropTypes.object.isRequired,
   }
 
   goBack() {
