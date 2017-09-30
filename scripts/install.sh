@@ -9,9 +9,9 @@ cyan="\e[0;36m"
 white="\e[0;37m"
 
 APP_NAME=$(cat package.json | grep name | head -1 | awk -F: '{ print $2 }' | sed 's/[ ",]//g')
-BRANCH_NAME="master"
+BRANCH_NAME="lowercase"
 DEPENDENCIES="react-native-deprecated-custom-components react-redux react-native-vector-icons redux"
-DEV_DEPENDENCIES="enzyme react-dom react-addons-test-utils redux-logger"
+DEV_DEPENDENCIES="enzyme enzyme-adapter-react-16 react-dom redux-logger"
 ZIP_FILENAME="react-native-base.zip"
 ZIP_DESTINATION="react-native-base-$BRANCH_NAME"
 APP_DESTINATION="app"
@@ -54,6 +54,7 @@ copy_files() {
     mkdir -p $APP_DESTINATION
     cp "$ZIP_DESTINATION/index.ios.js" .
     cp "$ZIP_DESTINATION/index.android.js" .
+    cp "$ZIP_DESTINATION/jest.config.js" .
     cp -r "$ZIP_DESTINATION/$APP_DESTINATION/" $APP_DESTINATION
 }
 
