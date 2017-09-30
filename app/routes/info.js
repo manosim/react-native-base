@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
 
 export default class Info extends React.Component {
   static propTypes = {
-    navigator: PropTypes.object.isRequired,
+    navigation: PropTypes.object.isRequired,
   }
 
   render() {

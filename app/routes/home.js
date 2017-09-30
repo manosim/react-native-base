@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
 
 export default class Home extends React.Component {
   static propTypes = {
-    navigator: PropTypes.object.isRequired,
+    navigation: PropTypes.object.isRequired,
   }
 
   render() {
@@ -49,7 +49,7 @@ export default class Home extends React.Component {
           style={styles.button}
           title="More Information"
           color={Styles.THEME_PRIMARY}
-          onPress={() => this.props.navigator.push(Routes.info())}
+          onPress={() => this.props.navigation.navigate('Info')}
         />
       </View>
     );
