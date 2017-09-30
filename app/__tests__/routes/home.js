@@ -9,7 +9,7 @@ import renderer from 'react-test-renderer';
 describe('routes/home.js', () => {
   const props = {
     navigation: {
-      push: jest.fn()
+      navigate: jest.fn()
     }
   };
 
