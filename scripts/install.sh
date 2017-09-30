@@ -10,7 +10,7 @@ white="\e[0;37m"
 
 APP_NAME=$(cat package.json | grep name | head -1 | awk -F: '{ print $2 }' | sed 's/[ ",]//g')
 BRANCH_NAME="lowercase"
-DEPENDENCIES="react-native-deprecated-custom-components react-redux react-native-vector-icons redux"
+DEPENDENCIES="react-navigation react-redux react-native-vector-icons redux"
 DEV_DEPENDENCIES="enzyme enzyme-adapter-react-16 prop-types react-dom redux-logger"
 ZIP_FILENAME="react-native-base.zip"
 ZIP_DESTINATION="react-native-base-$BRANCH_NAME"

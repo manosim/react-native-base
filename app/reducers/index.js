@@ -1,5 +1,7 @@
 import { combineReducers } from 'redux';
 
+import navigationReducer from './navigation';
+
 export default combineReducers({
-  exampleReducer: (state = {}, action) => state
+  navigation: navigationReducer,
 });

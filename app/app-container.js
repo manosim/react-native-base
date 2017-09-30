@@ -1,75 +1,70 @@
 import React from 'react';
-import { Provider } from 'react-redux';
-import { Navigator } from 'react-native-deprecated-custom-components';
-
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import { BackHandler } from 'react-native';
 import {
-  BackHandler,
-  StyleSheet,
-  View,
-} from 'react-native';
+  addNavigationHelpers,
+  NavigationActions,
+  StackNavigator,
+} from 'react-navigation';
 
-import configureStore from './store/configure-store';
-import NavigationBar from './navigation/navigation-bar';
-import SceneContainer from './navigation/scene-container';
-import Styles from './utils/styles';
-import RouteMapper from './navigation/route-mapper';
-import Routes from './navigation/routes';
+import RoutesConfig, { navigationOptions } from './navigation/routes-config';
+import Styles from './utils/styles'
 
-// Store
-const store = configureStore();
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
+export const AppNavigator = StackNavigator(RoutesConfig, {
+  navigationOptions,
+  cardStyle: {
     backgroundColor: Styles.BODY_BG,
-  },
-  navbar: {
-    backgroundColor: Styles.NAVBAR_BG,
   },
 });
 
-export default class AppContainer extends React.Component {
-  componentWillMount() {
-    BackHandler.addEventListener('hardwareBackPress', () => {
-      if (this.navigator && this.navigator.getCurrentRoutes().length > 1) {
-        this.navigator.pop();
-        return true;
-      }
-      return false;
-    });
+export class AppContainer extends React.Component {
+  static propTypes = {
+    dispatch: PropTypes.func.isRequired,
+    nav: PropTypes.object.isRequired,
+  };
+
+  constructor(props) {
+    super(props);
+
+    this.onBackPress = this.onBackPress.bind(this);
   }
 
-  renderScene(route, navigator) {
-    this.navigator = navigator;
+  componentDidMount() {
+    BackHandler.addEventListener('hardwareBackPress', this.onBackPress);
+  }
 
-    return (
-      <SceneContainer
-        title={route.title}
-        route={route}
-        navigator={navigator}
-        onBack={() => {
-          if (route.index > 0) {
-            navigator.pop();
-          }
-        }}
-        {...this.props}
-      />
-    );
+  componentWillUnmount() {
+    BackHandler.removeEventListener('hardwareBackPress', this.onBackPress);
+  }
+
+  onBackPress() {
+    const { dispatch, nav } = this.props;
+
+    if (nav.index === 0) {
+      return false;
+    }
+
+    dispatch({ type: NavigationActions.BACK });
+    return true;
   }
 
   render() {
     return (
-      <Provider store={store}>
-        <View style={styles.container}>
-          <Navigator
-            initialRoute={Routes.home()}
-            renderScene={(route, navigator) => this.renderScene(route, navigator)}
-            navigationBar={
-              <NavigationBar style={styles.navbar} routeMapper={RouteMapper} />
-            }
-          />
-        </View>
-      </Provider>
+      <AppNavigator
+        navigation={addNavigationHelpers({
+          dispatch: this.props.dispatch,
+          state: this.props.nav,
+        })}
+      />
     );
   }
 }
+
+export function mapStateToProps(state) {
+  return {
+    nav: state.navigation,
+  };
+}
+
+export default connect(mapStateToProps)(AppContainer);
