@@ -1,6 +1,6 @@
 react-native-base [![travis][travis-image]][travis-url] [![codecov][codecov-image]][codecov-url]
 ===
-Everything you need when starting a new react native project.
+Everything you need when starting a new react native project!
 
 
 ### Table of contents
@@ -16,8 +16,8 @@ Everything you need when starting a new react native project.
 
 ### What's in the box?
 
-  - React Native Navigator
-  - Tests (using Enzyme) - Coverage **100%**
+  - React Navigation
+  - Tests (using Jest & Enzyme) - Coverage **100%**
   - Style Variables (for branding)
   - Constant Variables (for endpoints, external urls etc.)
   - A couple basic routes to get you started
@@ -27,7 +27,6 @@ Everything you need when starting a new react native project.
 
   - Redux [+](http://redux.js.org/)
   - React DOM [+](https://www.npmjs.com/package/react-dom)
-  - React Addons Test Utils [+](https://www.npmjs.com/package/react-addons-test-utils)
   - Redux Logger [+](https://github.com/evgenyrodionov/redux-logger)
   - React Native Vector Icons [+](https://github.com/oblador/react-native-vector-icons)
   - Enzyme [+](http://airbnb.io/enzyme/)
@@ -81,17 +80,17 @@ That's all folks!
 
 ### What is it?
 
-React Native is amazing. Starting a new project `react-native init MyProject` also creates the iOS & Android projects which makes it harder(*maybe* impossible too?) to create a project template. The main idea is that you create your react-native project as usual and then you just copy this project's files (`./App` etc.), install the libraries and prepare your project for developement in no time.
+React Native is amazing. Starting a new project `react-native init MyProject` also creates the iOS & Android projects which makes it harder(*maybe* impossible too?) to create a project template. The main idea is that you create your react-native project as usual and then you just copy this project's files (`./app` etc.), install the libraries and prepare your project for developement in no time.
 
 
 ### Why use it?
 
-Every time I am setting up a react-native project I have to follow pretty much the same procedure. Instead of having to copy & paste and edit files from previous projects, I made this project which aims to be a generic "template". If you are going to use react-native's [Navigator](https://facebook.github.io/react-native/docs/navigator.html), redux and most of the libraries listed above, then `react-native-base` will save you lots of time.
+Every time I am setting up a react-native project I have to follow pretty much the same procedure. Instead of having to copy & paste and edit files from previous projects, I made this project which aims to be a generic "template". If you are going to use [react-navigation](https://reactnavigation.org), redux and most of the libraries listed above, then `react-native-base` will save you lots of time.
 
 
 ### Should I use it?
 
-If you are familiar enough with React Native - YES. If you are not, it is still fine but note that this is **not** a boilerplate. You will also need some basic [redux](http://redux.js.org/) knowledge. If you don't plan to use redux, then all that's left is the implementation of the Navigator with the tests.
+If you are familiar enough with React Native - YES. If you are not, it is still fine but note that this is **not** a boilerplate. You will also need some basic [redux](http://redux.js.org/) knowledge. If you don't plan to use redux, then all that's left is the implementation of the react-navigation with the tests.
 
 
 [travis-image]: https://travis-ci.org/manosim/react-native-base.svg?branch=master
