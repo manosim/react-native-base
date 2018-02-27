@@ -12,7 +12,6 @@ exports[`routes/home.js renders correctly 1`] = `
   <Text
     accessible={true}
     allowFontScaling={true}
-    disabled={false}
     ellipsizeMode="tail"
     style={
       Object {
@@ -27,7 +26,6 @@ exports[`routes/home.js renders correctly 1`] = `
   <Text
     accessible={true}
     allowFontScaling={true}
-    disabled={false}
     ellipsizeMode="tail"
     style={
       Object {
@@ -49,6 +47,7 @@ exports[`routes/home.js renders correctly 1`] = `
     }
     accessible={true}
     collapsable={undefined}
+    hasTVPreferredFocus={undefined}
     hitSlop={undefined}
     isTVSelectable={true}
     nativeID={undefined}
@@ -77,7 +76,7 @@ exports[`routes/home.js renders correctly 1`] = `
       <Text
         accessible={true}
         allowFontScaling={true}
-        disabled={false}
+        disabled={undefined}
         ellipsizeMode="tail"
         style={
           Array [
