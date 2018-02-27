@@ -23,13 +23,13 @@ info() {
     printf "$cyan  https://www.github.com/manosim/react-native-base$reset\n\n"
 
     printf "$yellow> Is this a fresh project? If not we suggest commiting any pending changes first.$reset\n"
-    printf "$yellow> React Native Base will overwrite the project's index.ios.js & index.android.js.$reset\n"
+    printf "$yellow> React Native Base will overwrite the project's index.js.$reset\n"
     printf "$yellow> If you are not sure, please visit the GitHub repository.$reset\n\n"
 }
 
 are_you_sure() {
     printf "$cyan> The installation will start in $(tput bold)5 seconds$(tput sgr0). Are you sure you want to continue?$reset\n"
-    printf "$cyan> To cancel the installation press 'Cmd + C ' or 'Ctrl + C'.$reset\n"
+    printf "$cyan> To cancel the installation press 'Cmd + C' or 'Ctrl + C'.$reset\n"
     sleep 5
 }
 
@@ -45,15 +45,13 @@ unzip_app() {
 
 rename_project_name() {
     printf "$cyan> Renaming the project name in the entrypoints.$reset\n"
-    sed -i '' -e "s/PROJECT_NAME/$APP_NAME/g" "$ZIP_DESTINATION/index.ios.js"
-    sed -i '' -e "s/PROJECT_NAME/$APP_NAME/g" "$ZIP_DESTINATION/index.android.js"
+    sed -i '' -e "s/PROJECT_NAME/$APP_NAME/g" "$ZIP_DESTINATION/index.js"
 }
 
 copy_files() {
     printf "$cyan> Copying files.$reset\n"
     mkdir -p $APP_DESTINATION
-    cp "$ZIP_DESTINATION/index.ios.js" .
-    cp "$ZIP_DESTINATION/index.android.js" .
+    cp "$ZIP_DESTINATION/index.js" .
     cp "$ZIP_DESTINATION/jest.config.js" .
     cp -r "$ZIP_DESTINATION/$APP_DESTINATION/" $APP_DESTINATION
 }
