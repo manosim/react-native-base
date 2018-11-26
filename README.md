@@ -50,7 +50,7 @@ Create your project as usual.
     react-native init MyProject
     cd MyProject/
 
-Then you will have to install the `dependecies` & the `devDependencies`.
+Then you will have to install the `dependencies` & the `devDependencies`.
 
     # dependencies
     npm install --save react-redux react-native-vector-icons redux 
@@ -79,7 +79,7 @@ That's all folks!
 
 ### What is it?
 
-React Native is amazing. Starting a new project `react-native init MyProject` also creates the iOS & Android projects which makes it harder(*maybe* impossible too?) to create a project template. The main idea is that you create your react-native project as usual and then you just copy this project's files (`./app` etc.), install the libraries and prepare your project for developement in no time.
+React Native is amazing. Starting a new project `react-native init MyProject` also creates the iOS & Android projects which makes it harder (*maybe* impossible too?) to create a project template. The main idea is that you create your react-native project as usual and then you just copy this project's files (`./app` etc.), install the libraries and prepare your project for developement in no time.
 
 
 ### Why use it?
